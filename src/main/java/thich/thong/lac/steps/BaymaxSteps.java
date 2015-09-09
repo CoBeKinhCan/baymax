@@ -293,5 +293,10 @@ public class BaymaxSteps extends ScenarioSteps {
 		onBaymax.waitForAnyTextToAppear(textValue);
 	}
 
+	@Step
+	public void accept_dialog_popup(String element) {
+		onBaymax.acceptPopUp(element);
+	}
+
 
 }

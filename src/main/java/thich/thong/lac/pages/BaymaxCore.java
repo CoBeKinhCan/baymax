@@ -257,7 +257,18 @@ public class BaymaxCore extends PageObject {
 	}
 	
 	public void wait_for_the_element_to_be_clickable(String element) {
-		new WebDriverWait(getDriver(), 60).ignoring(NoAlertPresentException.class)
+		new WebDriverWait(getDriver(), 60).ignoring(NoSuchElementException.class)
 				.until(ExpectedConditions.elementToBeClickable(getWebElement(element)));
+	}
+
+	public void acceptPopUp(String element) {
+		getWebElement(element).click();
+		waitForAlert();
+		getAlert().accept();
+	}
+
+	private void waitForAlert() {
+		new WebDriverWait(getDriver(), 60).ignoring(NoAlertPresentException.class)
+											.until(ExpectedConditions.alertIsPresent());
 	}
 }

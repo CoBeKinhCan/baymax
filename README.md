@@ -29,3 +29,6 @@ Copyright 2015 The Baymax Software Foundation
 Non-commercial
 
 Thank you for using Baymax.
+
+#NOTE
+Release baymax-1.0.0 ( gỡ bỏ phiên bản tiếng Việt)
